@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 
 const style = {
   paddingTop: '4px',
-  paddingBottom: '4px',
+  paddingBottom: '8px',
 
   inputText: {
     margin: '8px',

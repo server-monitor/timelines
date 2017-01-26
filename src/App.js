@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import eventsDataFromFile, { buildSeries, buildSeriesData } from './data/index';
@@ -123,12 +123,17 @@ export default class App extends React.Component {
       handleClick
     } = this;
 
-    const { options, doNotUpdate, incrementalUpdate, isDevEnv, userSession } = this.state;
+    const { options, doNotUpdate, incrementalUpdate, userSession } = this.state;
 
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <Input
+            handleChangeGroupSpecifier={handleChangeGroupSpecifier}
+            handleClick={handleClick}
+            userSession={userSession}
+          />
+
           <h2>Meetup Events Timelines</h2>
         </div>
 
@@ -137,14 +142,6 @@ export default class App extends React.Component {
           doNotUpdate={doNotUpdate}
           incrementalUpdate={incrementalUpdate}
         />
-
-        <Input
-          isDevEnv={isDevEnv}
-          handleChangeGroupSpecifier={handleChangeGroupSpecifier}
-          handleClick={handleClick}
-          userSession={userSession}
-        />
-
       </div>
     );
   }

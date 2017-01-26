@@ -19,32 +19,6 @@ export default class Events {
     });
   }
 
-  // pastAscending({
-  //   /* eslint-disable camelcase */
-  //   stop_if_date_less_than = null, stop_if_date_greater_than = null
-  //   /* eslint-enable */
-  // } = {}) {
-  //   return this.get({
-  //     stop_if_date_less_than,
-  //     stop_if_date_greater_than,
-  //     status: 'past',
-  //     desc: false
-  //   });
-  // }
-
-  // pastDescending({
-  //   /* eslint-disable camelcase */
-  //   stop_if_date_less_than = null, stop_if_date_greater_than = null
-  //   /* eslint-enable */
-  // } = {}) {
-  //   return this.get({
-  //     stop_if_date_less_than,
-  //     stop_if_date_greater_than,
-  //     status: 'past',
-  //     desc: true
-  //   });
-  // }
-
   request({
     stop_if_date_less_than,
     stop_if_date_greater_than,
@@ -53,9 +27,6 @@ export default class Events {
   }) {
     // const url = new URL('http://localhost:4000');
     const url = new URL('https://phx-api.herokuapp.com');
-    // const url = 'https://api.meetup.com/NullSpaceLabs/events?desc=true&' +
-    //   'group_urlname=&page=200&sig_id=201611406&omit=description%2Chow_to_find_us&' +
-    //   'status=past&sig=e6680c25b1b9b1e07cc5e9389a16160553ffc094';
 
     url.pathname = '/api/meetup_requests';
 
